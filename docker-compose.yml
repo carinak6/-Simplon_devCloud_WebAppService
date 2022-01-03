@@ -1,0 +1,20 @@
+version: '3'
+services:
+  textapi:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.dev
+    ports:
+      - "0.0.0.0:8080:8080"
+    networks:
+      - simplon-net
+
+#  texttests:
+#    build:
+#      context: .
+#      dockerfile: ./docker/Dockerfile.test
+#    networks:
+#      - simplon-net
+
+networks:
+  simplon-net:
